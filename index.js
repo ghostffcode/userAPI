@@ -1,3 +1,5 @@
+// Simple User API App using ExpressJS and MongoDB
+
 "use strict";
 
 const express = require('express');
@@ -152,7 +154,17 @@ app.post('/', (req, res) => {
       })
     }
   });
+});
+
+app.all('*', function (req, res) {
+  res.json({
+    err: true,
+    "msg": "Wrong Endpoint",
+    data: []
+  })
 })
+
+
 
 app.listen(3000, () => {
   console.log("App started on port 3000");

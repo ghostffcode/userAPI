@@ -161,8 +161,8 @@ app.all('*', function (req, res) {
     err: true,
     "msg": "Wrong Endpoint",
     data: []
-  })
-})
+  });
+});
 
 
 
